@@ -75,6 +75,10 @@ try {
     ) {
         $friendlyMessage .= ' El servidor MySQL no responde.';
         $friendlyMessage .= ' Verifica host, puerto y que MySQL este encendido.';
+        $friendlyMessage .= ' Conexion intentada: ' . $host . ':' . $port . '.';
+        if ($host === '127.0.0.1' || $host === 'localhost') {
+            $friendlyMessage .= ' Si usas alwaysdata, prueba con mysql-[cuenta].alwaysdata.net.';
+        }
     } else {
         $friendlyMessage .= ' Revisa tu configuracion.';
     }

@@ -3,11 +3,16 @@ declare(strict_types=1);
 
 return [
     // Cambia estos valores segun tu servidor MySQL.
-    'host' => '127.0.0.1',
+    // alwaysdata suele usar:
+    // host: mysql-[cuenta].alwaysdata.net
+    // port: 3306
+    // user: usuario MySQL creado en el panel
+    // name: nombre exacto de tu base (Databases > MySQL)
+    'host' => 'mysql-novazu.alwaysdata.net',
     'port' => '3306',
     'name' => 'mensajeria',
-    'user' => 'root',
-    'pass' => '',
+    'user' => 'novazu',
+    'pass' => 'novazu_geastiondespacho',
 
     // En true muestra detalle tecnico del error de conexion.
     'debug' => false,

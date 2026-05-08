@@ -39,6 +39,19 @@ return [
 ];
 ```
 
+Configuracion tipica en alwaysdata:
+
+```php
+return [
+    'host' => 'mysql-tu_cuenta.alwaysdata.net',
+    'port' => '3306',
+    'name' => 'tu_base',
+    'user' => 'tu_usuario_mysql',
+    'pass' => 'tu_password_mysql',
+    'debug' => false,
+];
+```
+
 3. Opcional: puedes sobreescribir esos valores con variables de entorno (PowerShell):
 
 ```powershell
