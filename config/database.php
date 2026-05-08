@@ -10,9 +10,9 @@ return [
     // name: nombre exacto de tu base (Databases > MySQL)
     'host' => 'mysql-novazu.alwaysdata.net',
     'port' => '3306',
-    'name' => 'mensajeria',
+    'name' => 'novazu_geastiondespacho',
     'user' => 'novazu',
-    'pass' => 'novazu_geastiondespacho',
+    'pass' => 'clase1234',
 
     // En true muestra detalle tecnico del error de conexion.
     'debug' => false,

@@ -75,6 +75,7 @@ try {
     } elseif (str_contains($normalizedError, 'access denied')) {
         $friendlyMessage .= ' Usuario o clave invalidos.';
         $friendlyMessage .= ' Revisa host, usuario y password.';
+        $friendlyMessage .= ' En alwaysdata usa el usuario MySQL del panel (no el FTP).';
     } elseif (
         str_contains($normalizedError, 'connection refused')
         || str_contains($normalizedError, 'php_network_getaddresses')
