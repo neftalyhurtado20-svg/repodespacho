@@ -26,7 +26,20 @@ Funcionalidades:
 mysql -u root -p < database/schema.sql
 ```
 
-2. Define variables de entorno (PowerShell):
+2. Edita [config/database.php](config/database.php) con tus datos reales de MySQL:
+
+```php
+return [
+    'host' => '127.0.0.1',
+    'port' => '3306',
+    'name' => 'mensajeria',
+    'user' => 'root',
+    'pass' => '',
+    'debug' => false,
+];
+```
+
+3. Opcional: puedes sobreescribir esos valores con variables de entorno (PowerShell):
 
 ```powershell
 $env:DB_HOST="127.0.0.1"
@@ -36,15 +49,15 @@ $env:DB_USER="root"
 $env:DB_PASS=""
 ```
 
-Si no defines variables, el sistema usa esos mismos valores por defecto.
+Si no defines variables de entorno, el sistema usa los valores de `config/database.php`.
 
-3. Inicia el servidor de desarrollo PHP:
+4. Inicia el servidor de desarrollo PHP:
 
 ```bash
 php -S localhost:8000
 ```
 
-4. Abre en tu navegador:
+5. Abre en tu navegador:
 
 ```text
 http://localhost:8000
