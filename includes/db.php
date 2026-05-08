@@ -2,16 +2,16 @@
 declare(strict_types=1);
 
 /**
- * Devuelve variable de entorno si existe; si no, usa el fallback.
+ * Devuelve [valor, fuente] donde fuente es "env" o "file".
  */
-function envOrDefault(string $key, mixed $fallback): mixed
+function configValueWithSource(string $key, mixed $fallback): array
 {
     $value = getenv($key);
     if ($value === false) {
-        return $fallback;
+        return [$fallback, 'file'];
     }
 
-    return $value;
+    return [$value, 'env'];
 }
 
 function isTruthy(mixed $value): bool
@@ -33,12 +33,19 @@ if (is_file($configFile)) {
     }
 }
 
-$host = (string) envOrDefault('DB_HOST', $fileConfig['host'] ?? '127.0.0.1');
-$port = (string) envOrDefault('DB_PORT', $fileConfig['port'] ?? '3306');
-$dbName = (string) envOrDefault('DB_NAME', $fileConfig['name'] ?? 'mensajeria');
-$user = (string) envOrDefault('DB_USER', $fileConfig['user'] ?? 'root');
-$password = (string) envOrDefault('DB_PASS', $fileConfig['pass'] ?? '');
-$debug = isTruthy(envOrDefault('APP_DEBUG', $fileConfig['debug'] ?? false));
+[$hostRaw, $hostSource] = configValueWithSource('DB_HOST', $fileConfig['host'] ?? '127.0.0.1');
+[$portRaw, $portSource] = configValueWithSource('DB_PORT', $fileConfig['port'] ?? '3306');
+[$dbNameRaw, $dbNameSource] = configValueWithSource('DB_NAME', $fileConfig['name'] ?? 'mensajeria');
+[$userRaw, $userSource] = configValueWithSource('DB_USER', $fileConfig['user'] ?? 'root');
+[$passwordRaw, $passwordSource] = configValueWithSource('DB_PASS', $fileConfig['pass'] ?? '');
+[$debugRaw] = configValueWithSource('APP_DEBUG', $fileConfig['debug'] ?? false);
+
+$host = (string) $hostRaw;
+$port = (string) $portRaw;
+$dbName = (string) $dbNameRaw;
+$user = (string) $userRaw;
+$password = (string) $passwordRaw;
+$debug = isTruthy($debugRaw);
 
 $dsn = sprintf(
     'mysql:host=%s;port=%s;dbname=%s;charset=utf8mb4',
@@ -85,6 +92,12 @@ try {
 
     if ($debug) {
         $friendlyMessage .= ' Detalle tecnico: ' . $exception->getMessage();
+        $friendlyMessage .= ' Config usada: ';
+        $friendlyMessage .= 'host=' . $host . ' (' . $hostSource . '), ';
+        $friendlyMessage .= 'port=' . $port . ' (' . $portSource . '), ';
+        $friendlyMessage .= 'db=' . $dbName . ' (' . $dbNameSource . '), ';
+        $friendlyMessage .= 'user=' . $user . ' (' . $userSource . '), ';
+        $friendlyMessage .= 'pass=' . ($password === '' ? 'vacia' : 'definida') . ' (' . $passwordSource . ').';
     }
 
     exit($friendlyMessage);
