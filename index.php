@@ -37,6 +37,27 @@ require __DIR__ . '/includes/header.php';
     <?php else: ?>
         <div class="table-wrap">
             <table>
+                <input type="text" id="buscador" placeholder="Buscar producto..." 
+style="width:300px; padding:10px; margin-bottom:15px;">
+                <script>
+
+document.getElementById("buscador").addEventListener("keyup", function() {
+
+    let filtro = this.value.toLowerCase();
+
+    let filas = document.querySelectorAll("#tablaProductos tr");
+
+    filas.forEach(function(fila) {
+
+        let texto = fila.textContent.toLowerCase();
+
+        fila.style.display = texto.includes(filtro) ? "" : "none";
+
+    });
+
+});
+
+</script>
                 <thead>
                     <tr>
                         <th>ID</th>
