@@ -10,6 +10,9 @@
     --success-bg: #3b298b;
     --success-text: #49012d;
     --error-bg: #d66066;
+    --error-text: #221d25;
+    --warning-bg: #2b4d96;
+    --warning-text: #a17d10;
 }
 
 * {
