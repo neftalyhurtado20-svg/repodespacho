@@ -21,7 +21,7 @@ require __DIR__ . '/includes/header.php';
 <main class="container main-content">
     <section class="page-header">
         <h1>Gestion de envios</h1>
-        <a class="button" href="create.php">Crear envio</a>
+        <a class="button button-danger" href="create.php">Crear envio</a>
     </section>
 
     <?php if ($flash !== null): ?>

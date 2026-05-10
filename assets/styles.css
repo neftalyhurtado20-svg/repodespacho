@@ -26,6 +26,10 @@ body {
     color: var(--text);
 }
 
+p {
+    text-transform: uppercase;
+}
+
 .container {
     width: min(1100px, 92%);
     margin: 0 auto;
@@ -95,6 +99,14 @@ body {
 
 .button:hover {
     background: var(--primary-hover);
+}
+
+.button-danger {
+    background: var(--danger);
+}
+
+.button-danger:hover {
+    background: #9f0f19;
 }
 
 .button-muted {
