@@ -1,15 +1,15 @@
 :root {
-    --bg: #f6f7fb;
-    --panel: #ffffff;
-    --line: #dde1ea;
-    --text: #1d2735;
+    --bg: #8dad40f6;
+    --panel: #c9d3bbbe;
+    --line: #5879c7;
+    --text: #8299b9;
     --muted: #5a6678;
-    --primary: #0353a4;
-    --primary-hover: #023e7d;
-    --danger: #c1121f;
-    --success-bg: #e8f8ef;
-    --success-text: #0d6b34;
-    --error-bg: #fdebec;
+    --primary: #a40310;
+    --primary-hover: #cfbb04;
+    --danger: #128f2d;
+    --success-bg: #3b298b;
+    --success-text: #49012d;
+    --error-bg: #d66066;
     --error-text: #8b1e25;
     --warning-bg: #fff8df;
     --warning-text: #826200;
@@ -263,3 +263,4 @@ tbody tr:last-child td {
         text-align: center;
     }
 }
+
