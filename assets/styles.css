@@ -1,7 +1,7 @@
 :root {
-    --bg: #8dad40f6;
+    --bg: hsla(0, 65%, 21%, 0.965);
     --panel: #c9d3bbbe;
-    --line: #5879c7;
+    --line: #7a1952;
     --text: #8299b9;
     --muted: #5a6678;
     --primary: #a40310;
@@ -10,9 +10,6 @@
     --success-bg: #3b298b;
     --success-text: #49012d;
     --error-bg: #d66066;
-    --error-text: #8b1e25;
-    --warning-bg: #fff8df;
-    --warning-text: #826200;
 }
 
 * {
