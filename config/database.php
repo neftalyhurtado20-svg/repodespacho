@@ -10,11 +10,12 @@ return [
     // name: nombre exacto de tu base (Databases > MySQL)
     'host' => 'ftp-novazu.alwaysdata.net',
     'name' => 'novazu_geastiondespacho',
-    'port' => 3306,
+    'port' => '3306',
     'user' => 'novazu',
     'pass' => 'clase1234',
 
     // En true muestra detalle tecnico del error de conexion.
     'debug' => false,
 ];
+
 
