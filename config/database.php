@@ -10,6 +10,7 @@ return [
     // name: nombre exacto de tu base (Databases > MySQL)
     'host' => 'ftp-novazu.alwaysdata.net',
     'name' => 'novazu_geastiondespacho',
+    'port' => 3306,
     'user' => 'novazu',
     'pass' => 'clase1234',
 
