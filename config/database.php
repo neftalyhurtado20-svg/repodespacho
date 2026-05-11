@@ -8,11 +8,11 @@ return [
     // port: 3306
     // user: usuario MySQL creado en el panel
     // name: nombre exacto de tu base (Databases > MySQL)
-    'host' => 'ftp-duberfainy.alwaysdata.net',
+    'host' => ' ftp-laurido.alwaysdata.net',
     'port' => '3306',
-    'name' => 'duberfainy_repodespacho',
-    'user' => 'duberfainy',
-    'pass' => 'clase1234',
+    'name' => 'laurido_gestion_envios',
+    'user' => 'LAURIDO',
+    'pass' => 'antho2022',
 
     // En true muestra detalle tecnico del error de conexion.
     'debug' => false,
