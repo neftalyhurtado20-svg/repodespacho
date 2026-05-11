@@ -1,17 +1,17 @@
 :root {
-    --bg: hsla(0, 65%, 21%, 0.965);
-    --panel: #c9d3bbbe;
-    --line: #2f13ad;
+    --bg: hsla(0, 61%, 71%, 0.96);
+    --panel: #060a01be;
+    --line: #6a4dec;
     --text: #8299b9;
     --muted: #5a6678;
     --primary: #a40310;
-    --primary-hover: #cfbb04;
-    --danger: #128f2d;
+    --primary-hover: #cf8f04;
+    --danger: #8f3512;
     --success-bg: #3b298b;
-    --success-text: #49012d;
+    --success-text: #381129;
     --error-bg: #d66066;
     --error-text: #221d25;
-    --warning-bg: #2b4d96;
+    --warning-bg: #d7d9df;
     --warning-text: #a17d10;
 }
 
