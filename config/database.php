@@ -9,7 +9,6 @@ return [
     // user: usuario MySQL creado en el panel
     // name: nombre exacto de tu base (Databases > MySQL)
     'host' => ' ftp-laurido.alwaysdata.net',
-    'port' => '3306',
     'name' => 'laurido_gestion_envios',
     'user' => 'LAURIDO',
     'pass' => 'antho2022',
