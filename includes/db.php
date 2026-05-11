@@ -76,6 +76,10 @@ try {
         $friendlyMessage .= ' Usuario o clave invalidos.';
         $friendlyMessage .= ' Revisa host, usuario y password.';
         $friendlyMessage .= ' En alwaysdata usa el usuario MySQL del panel (no el FTP).';
+    } elseif (str_starts_with($host, 'ftp-')) {
+        $friendlyMessage .= ' El host parece ser de FTP y no de MySQL.';
+        $friendlyMessage .= ' En alwaysdata usa mysql-[cuenta].alwaysdata.net.';
+        $friendlyMessage .= ' Conexion intentada: ' . $host . ':' . $port . '.';
     } elseif (
         str_contains($normalizedError, 'connection refused')
         || str_contains($normalizedError, 'php_network_getaddresses')
