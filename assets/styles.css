@@ -1,7 +1,7 @@
 :root {
     --bg: hsla(0, 65%, 21%, 0.965);
     --panel: #c9d3bbbe;
-    --line: #7a1952;
+    --line: #2f13ad;
     --text: #8299b9;
     --muted: #5a6678;
     --primary: #a40310;
@@ -24,6 +24,10 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: var(--bg);
     color: var(--text);
+}
+
+p {
+    text-transform: uppercase;
 }
 
 .container {
@@ -95,6 +99,14 @@ body {
 
 .button:hover {
     background: var(--primary-hover);
+}
+
+.button-danger {
+    background: var(--danger);
+}
+
+.button-danger:hover {
+    background: #9f0f19;
 }
 
 .button-muted {

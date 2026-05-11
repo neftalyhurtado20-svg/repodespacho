@@ -28,7 +28,7 @@ mysql -u root -p < database/schema.sql
 
 2. Edita [config/database.php](config/database.php) con tus datos reales de MySQL:
 
-```php
+```phpy
 return [
     'host' => '127.0.0.1',
     'port' => '3306',
@@ -43,11 +43,11 @@ Configuracion tipica en alwaysdata:
 
 ```php
 return [
-    'host' => 'mysql-tu_cuenta.alwaysdata.net',
+    'host' => 'mysql-duberfainy.alwaysdata.net',
     'port' => '3306',
-    'name' => 'tu_base',
-    'user' => 'tu_usuario_mysql',
-    'pass' => 'tu_password_mysql',
+    'name' => 'duberfainyrepodespacho',
+    'user' => 'duberfainy',
+    'pass' => 'clase1234',
     'debug' => false,
 ];
 ```
